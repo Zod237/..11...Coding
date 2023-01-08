@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charaset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width", initial-scal="1.0">
+        <title>..11.Coding </title>        
+
+        <!-- custom CSS  -->
+        <style type="text/css">
+            @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Corinthia&family=Dancing+Script&family=Great+Vibes&family=Indie+Flower&family=La+Belle+Aurore&family=Lobster&family=Pacifico&family=Satisfy&display=swap');
+
+*{
+          font-family: 'Indie Flower', cursive;;
+          margin: 0;
+          padding:0 ;
+          box-sizing: border-box;
+          outline: none;
+          border: none;
+          text-decoration: none;
+          transition: .2s linear;
+          text-decoration: capitalize;
+}
+      *::selection{
+          background-color: #fd02c7;
+          color: #22021b;
+      }
+      html{
+          font-size: 62.5%;
+          overflow-x: hidden;
+          scroll-behavior: smooth;
+          scroll-padding-top: 8rem;
+      }
+      ::-webkit-scrollbar{
+          height:.5rem;
+          width: 1rem;
+      }
+      ::-webkit-scrollbar-track{
+          background-color: transparent;
+      }
+      ::-webkit-scrollbar-thumb{
+          background-color: rgb(255, 0, 242);
+          border-radius: 5rem;
+          /* width: 1rem; */
+      }
+      body{
+          background-color: rgb(32, 1, 32);
+      }
+      section{
+          max-width:1200px;
+          margin: 0 auto;
+          padding: 2rem;
+      }
+      .btn{
+          display: inline-block;
+          margin-top: 1rem;
+          border-radius: 5rem;
+          background-color: #da23c1;
+          cursor:pointer;
+          color: rgb(0, 0, 0);
+          font-size: 1.8rem;
+          padding:1rem 3rem;
+      }
+      .btn:hover{
+          background-color:#7009a0;
+          color: #f7f8f7;
+      }
+      .heading{
+        margin-bottom: 2.5rem;
+        text-align: center;
+        font-size: 4rem;
+        color: #bbc4ce;
+      }
+      .heading span{
+        color: #842c96;
+      }
+      .header{
+          position: fixed;
+          top: 0;left: 0;right: 0;
+          z-index: 1000;
+          background-color:rgb(12, 8, 14);
+      }
+      .header .flex{
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+      }
+      .header .flex .logo{
+          font-size: 2.5rem;
+          cursor:pointer;
+          color: rgba(247, 241, 246, 0.842);
+      }
+      .header .flex .navbar a{
+          cursor:pointer;
+          margin-left: 2rem;
+          color: rgba(243, 235, 242, 0.842); 
+          font-size:2rem ;
+      }
+      .header .flex .navbar a:hover{
+          color: blueviolet;
+      }
+      #menu-btn{
+          cursor: pointer;
+          color: rgb(247, 0, 247);
+          font-size: 2.5rem;
+          display: none;
+      }
+      .home{
+          margin-top: 9rem;
+      }
+      .home .row{
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap-reverse;
+          gap:1.5rem;
+      }
+      .home .row .content{
+          flex:1 1 40rem;
+          text-align: center;
+      }
+      .home .row .image{
+          flex: 1 1 40rem;;
+      }
+      .home .row .image img{
+          width: 100%;
+      }
+      .home .row .content h3{
+          margin-bottom:1rem ;
+          font-size: 10rem;
+          color: #f300aa;
+          line-height: 1;
+      }
+      .home .row .content h3 span{
+          color:#f7f8f7;
+      }
+.home .left .immg img{
+    text-align: center;
+    position: absolute;
+    flex: 1 1 40rem;
+    width: 100%;
+}
+.home .left .icon{
+    display: flex;
+    align-items: center;
+    border: 2px solid rgb(0, 0, 0);
+    width: 550px;
+    padding:5px 10px ;
+    border-radius: 60px;
+}
+.home .left .icon img{
+    width: 35px;
+}
+.home .left .icon input{
+    background-color: transparent;
+    position: relative;
+    color: antiquewhite;
+    width:calc(100% - 16px);
+    padding-left: 10px;
+    display: flex;
+    border: 0;
+    outline: 0;
+    font-size: 10px;
+}
+.home .left ul {
+        display: flex;
+        list-style-type: none;
+    } 
+.home .left hr {
+    width: 100px;
+    margin: 20px 0;
+    background-color: rgb(209, 2, 123);
+    border: 0;
+    height: 5px;
+    border-radius: 6px;
+    transition: 0.5s;
+}
+.home .left h1{
+    color: beige;
+    font-size: 35px;
+}
+.home .left h1::first-letter{
+    color: beige;
+    font-size: 50px;
+}
+.home .left .pr1 {
+    font-size:30px;
+    color:rgb(253, 1, 190);
+    font-family: 'Indie Flower', cursive;
+}
+.home .left .pr2 {
+    font-size:25px;
+    color: rgb(172, 162, 162);
+    font-family: 'Indie Flower', cursive;
+}
+
+   .home .left ul li a{
+        display: flex;
+        position:relative;
+        width: 60px;
+        height: 60px;
+        border-radius: 23px;
+        margin-right: 50px;
+        font-size:30px ;
+        text-decoration: none;
+        justify-content: center;
+        align-items: center;
+        color: rgba(37, 1, 24, 0.952);
+        z-index: 5;
+        transition: 0.3s;
+    }
+    .home .left ul li a::after{
+        content: " ";
+        position: absolute;
+        left:0;
+        top: 0;
+        width: 60px ;
+        height: 60px;
+        border-radius: 21px;
+        border: 2px solid  rgba(255,255,255,0.2);
+        background-color:  rgba(255,255,255,0.4);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter:blur(5px);
+        z-index: -1;
+        transition: 0.3s;
+    }
+    .home .left ul li a:hover{
+        transform: rotate(-15deg);
+    }
+    .home .left ul li a:hover::before{
+        transform: rotate(15dg)
+    }
+    .home .left ul li a::before{
+        content: "";
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background:#f8044dc7;
+        right: -5px;
+        bottom: 0;
+        border-radius:23px;
+        z-index: -1;
+        transform-origin: 100% 100%;
+        transform:rotate(10deg);
+        transition: 0.3s;
+    }
+    .home .left ul li:nth-child(2) a::before{
+        background:#0509eb;
+    }
+    .home .left ul li:nth-child(3) a::before{
+        background:#0dc416;
+    }
+    .home .left ul li:nth-child(4) a::before{
+        background:#468be6;
+    }
+    
+    .count .box-container{
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(27rem,1fr));
+          gap:1rem;
+          align-items: flex-start;
+      }
+      .count .box-container .box {
+          background-color: #3a1435;
+          border-radius: .5rem;
+          padding: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap:1.5rem;
+      }
+      .count .box-container .box i{
+          font-size: 4rem;
+          color:#190324
+      }
+      .count .box-container .box .content h3{
+          font-size: 2rem;
+          color:#000000;
+          margin-bottom:.5rem ;
+      }
+      .count .box-container .box .content p{
+          font-size: 1.6rem;
+          color:#a110a1;
+          font-family: 'Pacifico', cursive;
+      }
+      .about .row{
+        display: flex;
+        align-items: center;
+        gap:1.5rem;
+        flex-wrap:wrap;
+    }
+    .about .row .image {
+        flex: 1 1 40rem;
+    }
+    .about .row .image img{
+        width: 100%;
+    }
+    .about .row .content{
+        text-align: center;
+        flex:1 1 40rem;
+    }
+    .about .row .content h3{
+        font-size: 4rem;
+        /* text-align: center; */
+        color: #fdfdfd;
+    }
+    .about .row .content p{
+        
+        padding: 1rem 0;
+        line-height: 2;
+        font-size: 2.3rem;
+        color:#8e4d8e;
+    }
+    .courses .slide{
+        background-color: #854385;
+        border-radius:.5rem ;
+        text-align:center;
+        padding: 2rem;
+        margin-bottom: 4rem ;
+    }
+    .courses .slide img{
+        height: 25rem;
+        width: 100%;
+    }
+    .courses .slide h3{
+        height: 1.5rem 0;
+        font-size: 2rem;
+        color: #ffffff;
+    }
+    .courses .slide p{
+        line-height: 2;
+        font-size: 1.6rem;
+        color: #000000;
+    }
+    .swiper-pagination-bullet{
+        background-color:#660551;
+    }
+    .swiper-pagination-bullet-active{
+        background-color:#8c09a0;
+    }
+
+/* contact */
+    .contact .row{
+        margin-bottom: 5rem;
+        display: flex;
+        align-items: center;
+        flex-wrap:wrap ;
+        gap: 1.5rem;
+    }
+    .contact .row .image{
+        flex: 1 1 40rem;
+    }
+    .contact .row .image img{
+        width: 100%;
+    }
+    .contact .row form{
+        flex: 11 40rem;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .contact .row form .box{
+        width: 100%;
+        margin-top:1rem;
+        margin-bottom:2rem;
+        border-radius:.5rem;
+        background-color: #6b0f63;
+        font-size: 1.8rem;
+        color: #fdfcfc;
+        padding:1.4rem;
+        text-transform: none;
+    }
+    .contact .row form span{
+        font-size: 1.6rem;
+        color: #ff00aaf8;
+    }
+    .contact .row form .radio{
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+    .contact .row form .radio label{
+        font-size: 1.6rem;
+        color: #a110a1;
+        margin-left: .5rem;
+        cursor: pointer;
+    }
+    .contact .row form .radio #female{
+        margin-left: 2rem;
+    }
+    .contact .row form .radio input{
+        appearance: none;
+        height: 2rem;
+        width: 2rem;
+        background-color:#a00a8c;
+        cursor: pointer;
+    }
+    .contact .row form .radio input:checked{
+        background-color: #fc017e;
+        border-radius: 5rem;
+    }
+    .contact .row form .radio #male:checked ~ label[for="male"]{
+        color: #fcfdfd;
+    }
+    .contact .row form .radio #female:checked ~ label[for="female"]{
+        color: #ffffff;
+    }
+
+/* FOOTER */
+.footer {
+    background-color: #000000;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+.footer .share a{
+    margin:0 .3rem;
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    color:#f5f0f0 ;
+    background-color:#793269 ;
+}
+.footer .credit{
+    margin-top:1.5rem;
+    padding: 1.5rem;
+    padding-top: 2.5rem;
+    border-top:.1rem solid rgb(240, 2, 208) ;
+    font-size: 2rem;
+    color: #ff01c8;
+}
+.footer .credit span{
+    color: #ffffff;
+}
+/* ##################### media queries ####################*/
+
+@media (max-width:991px){
+    html{
+          font-size: 55%;
+}
+    .home .row .content h3{
+          font-size: 8rem;    
+    }
+    .home .left{
+        font-size: 1rem;    
+  }
+}
+
+@media (max-width:768px){
+    #menu-btn{
+          display: inline-block;
+    }
+    #menu-btn.fa-times{
+          transform: rotate(180deg);
+    }
+    .header .flex .navbar{
+          position: absolute;
+          top: 99%;left: 0;right: 0;
+          border-top: .1rem solid rgb(247, 0, 255) ;
+          border-bottom: .1rem solid rgb(247, 0, 255);
+          background-color: #000000;
+          clip-path: polygon(0 0, 100% 0,100% 0, 0 0);
+    }
+    .header .flex .navbar.active {
+          clip-path: polygon(0 0, 100% 0,100% 100% , 0 100%);
+    }
+    .header .flex .navbar a {
+          display: block;
+          margin: 2rem;
+    }
+    .home .row .content h3{
+          font-size: 5rem;    
+    }
+    
+
+}
+
+@media (max-width:450){
+    html{
+        font-size: 50%;
+    }
+    .home .row .content h3{
+        font-size: 2rem;    
+  }
+  
+}
+        </style>
+         <!-- finish CSS  -->
+        <!-- google font link -->
+        <link rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+         
+         <!-- swiper css link -->
+         <link
+         rel="stylesheet"
+         href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+          />
+        
+    
+    </head>
+    <body>
+
+<!--*********************************** START HEADER ****************************-->
+<header class="header">
+    <section class="flex">
+            <a href="#home" class="logo"> ..11...Coding</a>
+        
+        
+        <nav class="navbar">
+                    <a href="#home">Homme</a>
+                    <a href="#about">About</a>
+                    <a href="#courses">Courses</a>
+                    <a href="#contact">Contact </a>
+        </nav>
+        <!-- class="fa-solid fa-bars" -->
+        <div id="menu-btn" class="fas fa-bars"></div>
+    </section>  
+</header>
+<!--*********************************** END HEADER ****************************-->
+<!--*********************************** START HOMME ****************************-->
+
+<section class="home" id="home">
+          <div class="row">
+                    <div class="content">
+                              <h3>Online <span>Education</span></h3>
+                              <a href="#contact" class="btn" >contact Us</a>
+                    </div>
+                    <div class="image">
+                              <img src="Codeavour-2022-MainInternal.png" alt="" >
+                    </div>
+
+          </div>
+    <br><br><br><br><br>
+          <!-- left div -->
+          <div class="left">
+              <div class="icon">
+                  <img src="search-512.png" alt="img" width="50" >
+                  <input type="text" placeholder="Search" id="search">
+              </div>  
+              <hr> 
+              <!-- keep reading, keep studying.
+               learn to code with mee -->
+              <!-- <h1>Push yourself , because no one else is going to do for you. </h1>--> 
+              <h1>Get help finding the 
+                  first steps to learning 
+                  programming.</h1>
+              <br>
+              
+              <p class="pr1">Best conding classes for kids in Morocco.</p>
+              <p class="pr2"> Ultimate guide for parents for enrolling your 
+                  child in a coding course.
+              </p>
+                  <br><br><br><br><br><br>
+              <ul>
+                  <li><a href="#inst"><i class="fa-brands fa-instagram"></i></a></li>
+                  <li><a href="#facb"><i class="fa-brands fa-facebook-f"></i></a></li>
+                  <li><a href="#wtsp"><i class="fa-brands fa-whatsapp"></i></a></li>
+                  <li><a href="#twit"><i class="fa-brands fa-twitter"></i></a></li>
+              </ul>
+          </div><br><br><br>
+          <div class="immg"> <img  src="eee.png"></div>
+          <br><br><br><br><br><br>
+         
+<!--*********************************** END HOME ****************************-->
+<!--*********************************** START COUTER ****************************-->
+<section class="count">
+          <div class="box-container">
+              <div class="box">
+                  <i class="fas fa-graduation-cap"></i>
+                  <div class="content">
+                      <h3>150+</h3>
+                      <p>Couses</p>
+                  </div>
+              </div>
+              <div class="box">
+                  <i class="fas fa-user-graduate"></i>
+                  <div class="content">
+                      <h3>1330+</h3>
+                      <p>Students</p>
+                  </div>
+              </div>
+              <div class="box">
+                  <i class="fas fa-chalkboard-user"></i>
+                  <div class="content">
+                      <h3>80+</h3>
+                      <p>Teatchers</p>
+                  </div>
+              </div>
+              <div class="box">
+                  <i class="fas fa-face-smile"></i>
+                  <div class="content">
+                      <h3>100%</h3>
+                      <p>Satisfaction </p>
+                  </div>
+              </div>
+          </div>
+         </section>
+<!--*********************************** END COUTER  ****************************-->
+<!--*********************************** START SECTON ****************************-->
+<br><br><br><br>
+<section class="about" id="about">
+          <div class="row">
+              <div class="image">
+                  <img  src="102-.png" alt="">
+              </div>
+              <div class="content">
+                  <h3>How to Teach Your Children to Code????</h3>
+                  <p>Learning to code can not only help your 
+                    child secure a stable future career; 
+                    but it also improves creativity, problem-solving, and project management skills. These qualities are useful in any job field, not just computer science. “STEM education creates critical thinkers, increases science literacy, and enables the next generation of innovators,” says the Engineering for Kids website. “This innovation and science literacy 
+                    depends on a solid knowledge base in the STEM areas.”
+                  </p>
+                  <a href="#contact" class="btn">Contact Us</a>
+      
+              </div>
+          </div>
+</section>
+<!--*********************************** END SECTON  ****************************-->
+<!--*********************************** START COURSES ****************************-->
+<section class="courses" id="courses">
+          <h1 class="heading">Our <span>courses</span></h1>
+          <div class="swiper course-slider">
+                    <div class="swiper-wrapper">
+
+                              <div class="swiper-slide slide">
+                                        <img src="111.png" alt="">
+                                        <h3>HTML</h3>
+                                        <p> It is the  standard markup language
+                                             for creating Web pages.</p>
+                              </div>
+                              <div class="swiper-slide slide">
+                                        <img src="222.png" alt="">
+                                        <h3>CSS</h3>
+                                        <p>It is the language we use to 
+                                            style an HTML document. </p>
+                              </div>
+                              <div class="swiper-slide slide">
+                                        <img src="333.png" alt="">
+                                        <h3>JAVASCRIPT</h3>
+                                        <p>It is the world's most popular
+                                             programming language.</p>
+                              </div>
+                              <div class="swiper-slide slide">
+                                        <img src="pngegg (26).png" alt="">
+                                        <h3>PHP</h3>
+                                        <p>It is a server scripting language, and a
+                                             powerful tool for making dynamic and
+                                              interactive Web pages.</p>
+                              </div>
+                              <div class="swiper-slide slide">
+                                        <img src="pngegg (25).png" alt="">
+                                        <h3>C++</h3>
+                                        <p>It is used to create computer programs,
+                                             and is one of the most used language
+                                              in game development.</p>
+                              </div>
+                              <div class="swiper-slide slide">
+                                        <img src="pngegg (23).png" alt="">
+                                        <h3>Pythone</h3>
+                                        <p>Can be used on a server to
+                                             create web applications.</p>
+                              </div>
+                              <div class="swiper-slide slide">
+                                        <img src="pngegg (24).png" alt="">
+                                        <h3>JAVA</h3>
+                                        <p>It is used to develop mobile apps,
+                                             web apps, desktop apps, 
+                                             games and much more...</p>
+                              </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+          </div>
+</section>
+<!--*********************************** END COURSES  ****************************-->
+<!--*********************************** START CONTACT US ****************************-->
+<selection class="contact" id="contact">
+          <h1 class="heading"><span>Contact</span></h1>
+          <div class="row">
+                    <div class="image">
+                              <img src="qqq.png" alt="">
+                    </div>
+                    <form action="" method="post">
+                              <span>your name</span>
+                              <input type="text" required placeholder="enter your full name" 
+                              maxlength="50" name="name" class="box">
+                              
+                              <span>your email</span>
+                              <input type="email" required placeholder="enter your valie email"
+                               maxlength="50" name="email" class="box">
+                              
+                              <span>your number</span>
+                              <input type="number" required placeholder="enter your valie number"
+                               max="9999999999" min="0" maxlength="50" name="number" class="box" 
+                               onkeypress="if(this.value.length ==10) return false;">
+                              
+                              <span>selet course</span>
+                              <select name="couses" class="box" required>
+                                        <option value="" disabled selected> select the course -- </option>
+                                        <option value="HTML">HTML</option>
+                                        <option value="CSS">CSS</option>
+                                        <option value="JS">JS</option>
+                                        <option value="PHP">PHP</option>
+                                        <option value="C">C</option>
+                                        <option value="C++">C++</option>
+                                        <option value="Pythone">Pythone</option>
+                                        <option value="JAVA">JAVA</option>
+                              </select>
+                              <span>select gender </span>
+                              <div class="radio">
+                                        <input type="radio"  name="gender" value="male" id="male">
+                                        <label for="male">Male</label>
+                                        <input type="radio" name="gender" value="female" id="female">
+                                        <label for="male">Female</label>
+                              </div>
+                              <input type="submit" value="send message" class="btn" name="send">
+                    </form>
+          </div>
+</selection>
+<!--*********************************** END CONTACT US ****************************-->
+<!--*********************************** START FOOTER ****************************-->
+<footer class="footer">
+          <section>
+                    <div class="share">
+
+                    </div>
+                    <div class="credit">
+                        &copy;copyright @ by <span> BenkacemSalma...Web-designer</span>
+                        all rights reserved !!
+                    </div>
+          </section>
+</footer>
+<!--*********************************** END FOOTER ****************************-->
+
+
+
+
+    <!-- ####### scripts-->
+     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js">
+     </script> 
+     <script type="text/javascript" >
+        let menuBtn = document.querySelector('#menu-btn');
+let navbar = document.querySelector('.header .flex .navbar');
+
+menuBtn.onclick =()=>{  
+     menuBtn.classList.toggle('fa-times');
+     navbar.classList.toggle('active');
+}
+var swiper = new Swiper(".course-slider", {
+          spaceBetween: 20,
+          grabCursor:true,
+          loop:true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable:true,
+          },
+          breakpoints: {
+                    540: {
+                      slidesPerView: 1,
+                    },
+                    768: {
+                      slidesPerView: 2,
+                    },
+                    1024: {
+                      slidesPerView: 3,
+                    },
+          },
+});
+</script>
+    <script 
+        src="https://kit.fontawesome.com/92fef89052.js" 
+        crossorigin="anonymous">
+</script>      
+
+
+    
